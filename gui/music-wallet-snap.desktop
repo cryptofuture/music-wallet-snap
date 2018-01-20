@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0.0
+Name=Musicoin Wallet
+Comment=Musicoin Desktop Wallet
+Exec=$SNAP/music-wallet/"Musicoin Wallet"
+Icon=Icon=${SNAP}/music-wallet/favicon.png
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Network;

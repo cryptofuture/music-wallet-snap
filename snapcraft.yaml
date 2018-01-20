@@ -1,0 +1,31 @@
+name: music-wallet
+version: "1.0.0"
+summary: Musicoin Desktop Wallet
+description: "For more details please visit: https://github.com/Musicoin/desktop"
+
+grade: devel
+confinement: devmode
+
+parts:
+  music-wallet:
+    plugin: nil
+    prepare: ./stage_binaries.sh
+    stage-packages:
+      - libnss3
+      - libx11-xcb1
+      - libxcomposite1
+      - libxcursor1
+      - libxdamage1
+      - libxi6
+      - libxtst6
+      - libcups2
+      - libfontconfig1
+      - libxss1
+      - libpangocairo-1.0-0
+      - libxrandr2
+      - libgconf-2-4
+      - libasound2
+      - libatk1.0-0
+      - libgtk-3-0
+    install: |
+      cp -a ./arch/music-wallet/ $SNAPCRAFT_PART_INSTALL/music-wallet/
